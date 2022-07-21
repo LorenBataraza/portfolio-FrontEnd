@@ -12,13 +12,17 @@ html {
   background-color: var(--background-color);
 }
 
-
 .body {
   background-color: var(--background-color);
 }
 
 p {
   margin: 0 !important;
+}
+
+h5{
+  padding: 0;
+  margin: 0;
 }
 
 .navbar {
@@ -48,8 +52,11 @@ i {
 
 
 .banner-div {
-  /* padding: -1em; */
+ width: 110%;
+  width: 100%;
   max-height: 300px;
+  overflow: hidden;
+
 }
 
 /* Avatar Photo */
@@ -153,18 +160,27 @@ div.header {
 }
 
 
-
-.proyect-element h3 {
-  color: cyan;
+.proyect-header {
+  color: var(--bs-blue);
+  padding: 5px;
+  margin: 0;
 }
 
 
+.proyect-element  p {  
+  max-width: 80%;
 
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+}
 
 
 .organization-short {
   display: flex;
-  align-content: center;
+  justify-content: center;
 }
 
 
@@ -190,28 +206,44 @@ section p {
   margin-left: 5px;
 }
 
-.middle{
-  justify-content: center;
+.flex{
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-between;
+}
+
+.skill-title{
+  padding-left: 1rem;
+  flex-basis: 10%;
+  flex-shrink: 0;
+  flex-grow: 1;
 }
 
 .progress{
   margin: auto;
   width: 80%;
+  flex-basis: auto;
 }
 
 .progress-bar{
   width: 80%;
 }
 
-.flex{
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
+section.description{
+  padding: 0;
 }
 
-.skill-title{
-  padding-left: 1rem;
-  flex-basis: 18%;
-  flex-shrink: 0;
-  flex-grow: 1;
+
+.description > *{
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.description > .banner-div{
+  margin: 0;
+}
+
+
+.container{
+  align-items: center;
 }
