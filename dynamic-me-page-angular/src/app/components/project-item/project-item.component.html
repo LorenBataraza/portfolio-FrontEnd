@@ -1,15 +1,20 @@
-<p>project-item works!</p>
-
-
-<div class="proyect-element">
-    <div>
+<div>
         <div class="header">
-            <h3 class="proyect-header">e-Farmacia</h3>
-            <div class="icon-group">
-                <i class="bi bi-pencil-square end"></i>
-                <i class="bi bi-trash-fill"></i>
-            </div>
+            <h3 class="proyect-header">{{item.title}}</h3>
+                <div class="icon-group">
+                    <fa-icon  
+                    [ngStyle]="{'color': 'red'}"
+                    [icon]= "editIcon"
+                    (click)="toggleEdition()"
+                    ></fa-icon>
+    
+                    <fa-icon  
+                    [ngStyle]="{'color': 'red'}"
+                    [icon]= "trashIcon"
+                    (click)="EmitExperienceDeletion()"
+                    ></fa-icon>
+                </div>
         </div>
-        <p class="text-muted"> Instituto Politécnico Superior</p>
-    </div>
+    <p> {{item.description}}</p>
+    <p class="text-muted">{{item.interval}}</p>
 </div>

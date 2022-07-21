@@ -7,10 +7,11 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { ExperienceItemComponent } from './components/experience-item/experience-item.component';
 import { ProjectItemComponent } from './components/project-item/project-item.component';
-import { AboutSectionComponent } from './components/about-section/about-section.component';
 import { DescriptionSectionComponent } from './components/description-section/description-section.component';
 import { SectionComponent } from './components/section/section.component';
 import { ProfileComponent } from './components/profile/profile.component';
+
+
 
 @NgModule({
   declarations: [
@@ -18,7 +19,6 @@ import { ProfileComponent } from './components/profile/profile.component';
     HeaderComponent,
     ExperienceItemComponent,
     ProjectItemComponent,
-    AboutSectionComponent,
     DescriptionSectionComponent,
     SectionComponent,
     ProfileComponent

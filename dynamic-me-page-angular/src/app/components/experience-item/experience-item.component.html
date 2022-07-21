@@ -1,16 +1,27 @@
-<p>experience-item works!</p>
+<div *ngIf="index!== 0">
+    <hr>
+</div>
+
 <div class="experience-element">
-    <img src="../assets/img/Inicitiativa Aurora.png" alt="Iniciativa Aurora icon">
-    <div>
+    <div class="experience-image" >
+    <img [src]="item.img_path" alt="icon">
+    </div>
+    
+    <div class="experience-description">
         <div class="header">
-            <h3>Voluntary Work</h3>
+            <h3>{{item.title}}</h3>
+
             <div class="icon-group">
-                <i class="bi bi-pencil-square end"></i>
-                <i class="bi bi-trash-fill"></i>
+                <fa-icon [ngStyle]="{'color': 'red'}" [icon]="editIcon" (click)="toggleEdition()"></fa-icon>
+
+                <fa-icon [ngStyle]="{'color': 'red'}" [icon]="trashIcon" (click)="EmitExperienceDeletion()"></fa-icon>
+
             </div>
+
         </div>
 
-        <p></p>
-        <p class="text-muted"> experience.description</p>
+        <p>{{item.description}}</p>
+        <p class="text-muted"> {{item.interval}}</p>
     </div>
+    
 </div>

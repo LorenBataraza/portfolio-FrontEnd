@@ -1,32 +1,71 @@
-<p>section works!</p>
-
-
-
 <section>
     <div class="header">
-        <h2>{{title}} </h2>
-        <div class="icon_group">
-            <i class="bi bi-plus-square-fill"></i>
-        </div>
+        <h2>
+            {{this.sectionTitle}}
+        </h2>
+    
+    <div class="icon-group">
+    
+        <fa-icon  
+            [ngStyle]="{'color': 'red'}"
+            [icon]= "isExpanded? compressIcon : expandIcon"
+            (click)="toggleSection(sectionType,profile)"
+        >
+        </fa-icon>
+    
     </div>
+        
+    
+    </div> 
+    
+    <div            
+    *ngIf="isExpanded"
+    [ngSwitch]="sectionType"
+    >  
+        <p
+        *ngSwitchCase="sectionTypesEnum.About"
+        >
+            {{profile.about}}
+        </p>
 
-    <div class="proyect-element">
-        <div>
-            <div class="header">
-                <h3 class="proyect-header">e-Farmacia</h3>
-                <div class="icon-group">
-                    <i class="bi bi-pencil-square end"></i>
-
-                    <fa-icon  
-                    [ngStyle]="{'color': 'red'}"
-                    [icon]="trashIcon"
-                    (click)="ToggleSection()"
-                    >
-                    </fa-icon>
-                    
-                </div>
-            </div>
-            <p class="text-muted"> Instituto Politécnico Superior</p>
+        <div
+        *ngSwitchCase="sectionTypesEnum.Experiences"
+        >
+            <app-experience-item 
+            *ngFor="let item of items; let i = index"
+            [item]="item"
+            [index]="i"
+            (emitDeleteSection)="deleteElement(profile,sectionType ,item)" 
+            >
+            </app-experience-item>           
         </div>
+
+
+        <div
+        *ngSwitchCase="sectionTypesEnum.Projects"
+        >
+            <app-project-item 
+            *ngFor="let item of items; let i = index"
+            [item]="item"
+            [index]="i">
+            </app-project-item>           
+        </div>
+
+        <div class="bottom icon-group">
+            <fa-icon 
+            class="bottom" 
+            [ngStyle]="{'color': 'red'}"
+            [icon]="trashIcon"
+            (click)="emitDeleteSection()"
+            >
+            </fa-icon>
+        </div>
+    </div> 
+    
+    <div
+    *ngIf="!profile.show_about"
+    >
     </div>
-</section>
+    
+    </section>
+    
