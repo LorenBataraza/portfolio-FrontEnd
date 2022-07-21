@@ -1,0 +1,44 @@
+<section>
+<div class="header">
+    <h2>
+        {{section_title}}
+    </h2>
+
+<div class="icon-group">
+
+    <fa-icon  
+        [ngStyle]="{'color': 'red'}"
+        [icon]= "expandIcon"
+        (click)="toggleSection(profiles)"
+    >
+    </fa-icon>
+
+</div>
+    
+
+</div> 
+
+<div
+class="bottom"
+*ngIf="profiles.show_about"
+>
+    <p>
+        {{profiles.about}}
+    </p>
+
+    <fa-icon  
+    [ngStyle]="{'color': 'red'}"
+    [icon]="trashIcon"
+    (click)="emitDeleteSection()"
+    >
+    </fa-icon>
+
+</div> 
+
+<div
+*ngIf="!profiles.show_about"
+>
+</div>
+
+</section>
+

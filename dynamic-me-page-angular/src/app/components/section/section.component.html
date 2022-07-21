@@ -1,0 +1,32 @@
+<p>section works!</p>
+
+
+
+<section>
+    <div class="header">
+        <h2>{{title}} </h2>
+        <div class="icon_group">
+            <i class="bi bi-plus-square-fill"></i>
+        </div>
+    </div>
+
+    <div class="proyect-element">
+        <div>
+            <div class="header">
+                <h3 class="proyect-header">e-Farmacia</h3>
+                <div class="icon-group">
+                    <i class="bi bi-pencil-square end"></i>
+
+                    <fa-icon  
+                    [ngStyle]="{'color': 'red'}"
+                    [icon]="trashIcon"
+                    (click)="ToggleSection()"
+                    >
+                    </fa-icon>
+                    
+                </div>
+            </div>
+            <p class="text-muted"> Instituto Politécnico Superior</p>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,26 @@
+{    
+    "profiles":[
+        {
+            "name":"Lorenzo",
+            "surname": "Cabrera Blanch",
+            "about": "Soy",
+            "experiences":[
+                {
+                    "title":"",
+                    "description":"",
+                    "interval": "",
+                    "img_path": "", 
+                    "organization":"" 
+                }
+            ],
+            "projects":[
+                {
+
+                }
+            ]
+        },
+        {
+
+        }
+    ]
+}
