@@ -2,7 +2,7 @@
   --spacer: 1rem;
   --background-color: #ddd;
   --border-color: #ee6452;
-  --icon-size: 1.5rem;
+  --icon-size: 1.3rem;
   --section-color: white;
 }
 
@@ -12,8 +12,13 @@ html {
   background-color: var(--background-color);
 }
 
+
 .body {
   background-color: var(--background-color);
+}
+
+p {
+  margin: 0 !important;
 }
 
 .navbar {
@@ -34,6 +39,7 @@ img {
 
 i {
   font-size: var(--icon-size) !important;
+  cursor: pointer;
 }
 
 .nav-icon {
@@ -42,7 +48,8 @@ i {
 
 
 .banner-div {
-  padding: -1em;
+  /* padding: -1em; */
+  max-height: 300px;
 }
 
 /* Avatar Photo */
@@ -50,14 +57,17 @@ i {
   vertical-align: middle;
   width: 200px;
   border-radius: 50%;
+  box-shadow: 0px 0px 1px 5px #d3d3d3;
 }
 
+.top-card-photo {
+  margin-top: -100px;
+}
 
 .banner {
   max-width: 100%;
-  object-fit: cover;
   border-radius: 10px 10px 0 0;
-
+  object-fit: cover;
 }
 
 
@@ -98,9 +108,6 @@ section>div>h2 {
   margin-left: 3px;
 }
 
-section p {
-  margin-left: 5px;
-}
 
 
 /* Header Of Every Section */
@@ -147,11 +154,6 @@ div.header {
 
 
 
-p {
-  margin-bottom: 0.5rem;
-}
-
-
 .proyect-element h3 {
   color: cyan;
 }
@@ -162,14 +164,54 @@ p {
 
 .organization-short {
   display: flex;
+  align-content: center;
 }
 
 
 .organization-short>img {
   flex: 1 1 0%;
+  min-width: 75px;
   border-radius: 20%;
 }
 
+
+/* Paragraph  */
+
+p {
+  margin-bottom: 0.5rem;
+}
+
+
 .organization-short>p {
-  flex: 1 1 75%;
+  flex: 1 1 65%;
+}
+
+section p {
+  margin-left: 5px;
+}
+
+.middle{
+  justify-content: center;
+}
+
+.progress{
+  margin: auto;
+  width: 80%;
+}
+
+.progress-bar{
+  width: 80%;
+}
+
+.flex{
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.skill-title{
+  padding-left: 1rem;
+  flex-basis: 18%;
+  flex-shrink: 0;
+  flex-grow: 1;
 }
