@@ -1,1 +1,109 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+    --spacer: 0.5rem;
+    --background-color: #ddd;
+    --border-color: #ee6452;
+    --icon-size: 1.5rem;
+    --section-color: white;
+    --section-radius: 25px;
+    --padding-div:0.5rem;
+  }
+
+
+/* General Style */
+html {
+max-width: 1000px;
+margin: auto;
+background-color: var(--background-color);
+}
+
+/* Global Styles */
+
+.icon-group {
+  display: flex;
+  padding: 0 0;
+  justify-content: space-between;
+  gap: var(--spacer);
+}
+
+h3,h2,h1 {
+  margin: var(--spacer);
+}
+
+section {
+    padding: var(--spacer);
+    border-radius: var(--section-radius);
+    border-width: 1px;
+    margin: 1em;
+    background-color: var(--section-color);
+}
+  
+body{
+  background-color: var(--background-color);
+}
+
+/* Header Modifications */
+div.header {
+  display: flex;
+  overflow: auto;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 15px 5px 10px;
+}
+
+.header:nth-child(1){
+  padding-left: 15px ;
+}
+
+
+div.bottom{ 
+  display: flex;
+  justify-content: flex-end;
+  padding: 5px 15px 10px 10px;
+}
+
+
+
+fa-icon{
+  cursor: pointer
+}
+
+img {
+  object-fit: contain;
+  overflow: clip;
+  vertical-align: middle;
+  margin: 1px;
+  border-radius: var(--section-radius);
+
+}
+
+div.experience-element {
+  display: flex;
+  padding: 10px;
+  gap: var(--spacer);
+  overflow: auto;
+  align-items: stretch;
+}
+
+.experience-element div {
+  padding: 5px;
+}
+
+.experience-element > .experience-description{
+  flex-grow: 1 ;
+  flex-shrink: 1 ;
+  flex-basis: 90%;
+  border-radius: 20%;
+}
+
+.experience-image{
+  flex-grow: 1 ;
+  flex-shrink: 1 ;
+  flex-basis: 10%;
+}
+
+hr {
+  margin-left: 1% !important;
+  margin-right: 1% !important;
+}
