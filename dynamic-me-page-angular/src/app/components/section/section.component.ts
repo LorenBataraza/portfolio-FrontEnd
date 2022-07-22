@@ -26,8 +26,8 @@ export class SectionComponent implements OnInit {
   @Input() profile: Profile = dataBaseProfiles;
   @Input() sectionType: sectionTypes = this.sectionTypesEnum.About;
   
-  isExpanded: boolean = true;
-  items: any;
+  isExpanded: boolean = this.itemExtractor(this.profile, this.sectionType);;
+  items: any = this.itemExtractor(this.profile, this.sectionType);
   // Icon instanciation
 
   trashIcon = faTrash;
@@ -47,28 +47,11 @@ export class SectionComponent implements OnInit {
       .subscribe(
         value => this.isExpanded = value
       )
-    
+
     }
 
 
   ngOnInit(): void {
-    // Extract the items to show and expand indicator from the profile
-    switch (this.sectionType) {
-      case (this.sectionTypesEnum.About):
-        this.items = this.profile.about;
-        this.isExpanded = this.profile.show_about;
-        break;
-  
-        case this.sectionTypesEnum.Experiences:
-          this.items = this.profile.experiences;
-          this.isExpanded = this.profile.show_experiences;
-          break;
-        
-        case this.sectionTypesEnum.Projects:
-          this.items = this.profile.projects;
-          this.isExpanded = this.profile.show_projects;
-          break;
-    }
   }
 
 
@@ -92,5 +75,32 @@ export class SectionComponent implements OnInit {
     this.profileService.deleteElement(profile,sectionType, section )
   }
 
-}
+  itemExtractor(profile : Profile, sectionType : sectionTypes,): any{
+  // Extract the items to show and expand indicator from the profile
+  switch (sectionType) {
+    case this.sectionTypesEnum.About:
+       return profile.about;
 
+      case this.sectionTypesEnum.Experiences:
+        return profile.experiences;
+      
+      case this.sectionTypesEnum.Projects:
+        return profile.projects;
+  }
+  }
+
+  isExpandedExtractor(profile : Profile, sectionType : sectionTypes,): any{
+    // Extract the items to show and expand indicator from the profile
+    switch (sectionType) {
+      case this.sectionTypesEnum.About:
+         return profile.show_about;
+  
+        case this.sectionTypesEnum.Experiences:
+          return profile.show_experiences;
+        
+        case this.sectionTypesEnum.Projects:
+          return profile.show_projects;
+    }
+    }
+  
+}

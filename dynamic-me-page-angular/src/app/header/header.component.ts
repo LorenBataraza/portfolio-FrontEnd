@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Profile } from 'src/assets/intervafaces/Profile';
+import { dataBaseProfiles } from '../../profileMock';
 
 @Component({
   selector: 'app-header',
@@ -6,10 +8,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
+  profile: Profile = dataBaseProfiles;
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {  
   }
 
 }

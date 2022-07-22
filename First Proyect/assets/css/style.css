@@ -50,6 +50,8 @@ i {
   vertical-align: middle;
   width: 200px;
   border-radius: 50%;
+  box-shadow: 10px 10px #888888;
+
 }
 
 
