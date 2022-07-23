@@ -1,1 +1,50 @@
-<p>description-section works!</p>
+<section>
+    <div>
+        <div class="banner-div">
+            <img src="{{profile.banner_path}}" alt="{{profile.name}} Banner" class="banner">
+        </div>
+        <div class="row top-card">
+            <div class="col-2">
+                <img src="{{profile.avatar_path}}" class="avatar top-card-photo" alt="{{profile.name}} Avatar">
+
+                <a href="" class="align-text-bottom">
+                    <i class="bi bi-pencil-square end"></i>
+                </a>
+
+            </div>
+
+            <div class="header">
+
+            <div>
+            <h1>{{profile.name}}</h1>
+
+            <p *ngFor="let text of profile.description_texts">
+            {{text}}
+            </p>
+            
+            </div>
+
+            <div>
+                <div class="organization-short"
+                *ngFor="let organization of profile.organizations"
+                >
+                    <img src="{{organization.img_path}}" alt="{{organization.name}} icon" width="50px">
+                    <p>{{organization.name}}</p>
+                </div>
+            </div>
+
+            </div>
+
+            <div >
+                <button type="button" class="btn btn-primary me-2 " (click)="moreInterest()">Tengo Interés en</button>
+
+                <button type="button" class="btn btn-outline-secondary me-2" (click)="addSection()">Añadir Sección</button>
+
+                <button type="button" class="btn btn-outline-secondary " (click)="moreOptions()">Más</button>
+            </div>
+
+
+        </div>
+
+    </div>
+</section>
