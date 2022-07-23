@@ -26,8 +26,9 @@ export class SectionComponent implements OnInit {
   @Input() profile: Profile = dataBaseProfiles;
   @Input() sectionType: sectionTypes = this.sectionTypesEnum.About;
   
-  isExpanded: boolean = this.itemExtractor(this.profile, this.sectionType);;
-  items: any = this.itemExtractor(this.profile, this.sectionType);
+  isExpanded: boolean = true;
+  items: any = this.profile.experiences;
+
   // Icon instanciation
 
   trashIcon = faTrash;
@@ -41,23 +42,32 @@ export class SectionComponent implements OnInit {
   constructor(
     private uiService : UiService,
     private profileService : ProfilesService
+    // private profileService : ProfilesService
   ) { 
 
-  this.subscription = this.uiService.toggleSection(this.sectionType, this.profile)
-    .subscribe(
-      value => this.isExpanded = value
-    )
+    this.subscription = this.uiService.toggleSection(this.sectionType, this.profile)
+      .subscribe(
+        value => this.isExpanded = value
+      )
 
     }
 
 
   ngOnInit(): void {
+    
+    this.isExpanded = this.profileService.itemExtractor(this.profile, this.sectionType);;
+    this.items = this.profileService.itemExtractor(this.profile, this.sectionType);
+  
   }
+
 
   // Section manipulation
   toggleSection(type : sectionTypes ,profile : Profile):void{
     this.isExpanded = !this.isExpanded
-    this.uiService.toggleSection(type, profile);
+    // this.uiService.toggleSection(type, profile);
+
+    profile.show_about = !profile.show_about
+    this.onToggleSection.emit(profile) ;
     
   }
 
@@ -67,38 +77,9 @@ export class SectionComponent implements OnInit {
   }
 
   // Element Manipulation
-  deleteElement(profile : Profile, sectionType : sectionTypes, section:   any ){
-    this.profileService.deleteElement(profile,sectionType, section )
+  deleteElement(profile : Profile, sectionType : sectionTypes, section: any ){
+    // this.profileService.deleteElement(profile,sectionType, section )
   }
-
-  itemExtractor(profile : Profile, sectionType : sectionTypes): any{
-  // Extract the items to show and expand indicator from the profile
-  switch (sectionType) {
-    case this.sectionTypesEnum.About:
-       return profile.about;
-
-      case this.sectionTypesEnum.Experiences:
-        return profile.experiences;
-      
-      case this.sectionTypesEnum.Projects:
-        return profile.projects;
-  }
-  }
-
-  isExpandedExtractor(profile : Profile, sectionType : sectionTypes): any{
-    // Extract the items to show and expand indicator from the profile
-    switch (sectionType) {
-      case this.sectionTypesEnum.About:
-         return profile.show_about;
-  
-        case this.sectionTypesEnum.Experiences:
-          return profile.show_experiences;
-        
-        case this.sectionTypesEnum.Projects:
-          return profile.show_projects;
-    }
-    }
-
 
   
 }

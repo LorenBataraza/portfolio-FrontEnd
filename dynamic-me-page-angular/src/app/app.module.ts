@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-
 import { AppRoutingModule } from './app-routing.module';
+
+import{ HttpClientModule } from '@angular/common/http'
+
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { ExperienceItemComponent } from './components/experience-item/experience-item.component';
@@ -10,7 +13,6 @@ import { ProjectItemComponent } from './components/project-item/project-item.com
 import { DescriptionSectionComponent } from './components/description-section/description-section.component';
 import { SectionComponent } from './components/section/section.component';
 import { ProfileComponent } from './components/profile/profile.component';
-import { DisplayTestingComponent } from './components/display-testing/display-testing.component';
 
 
 
@@ -22,13 +24,13 @@ import { DisplayTestingComponent } from './components/display-testing/display-te
     ProjectItemComponent,
     DescriptionSectionComponent,
     SectionComponent,
-    ProfileComponent,
-    DisplayTestingComponent
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

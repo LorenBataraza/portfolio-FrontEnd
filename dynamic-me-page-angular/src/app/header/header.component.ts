@@ -8,8 +8,7 @@ import { dataBaseProfiles } from '../../profileMock';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  title: string = 'My Tasks List';
-  
+  profile: Profile = dataBaseProfiles;
   constructor() { }
 
   ngOnInit(): void {  

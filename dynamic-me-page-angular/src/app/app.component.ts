@@ -5,9 +5,9 @@ import { dataBaseProfiles } from '../profileMock';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css', '../styles.css']
 })
 export class AppComponent {
   profile: Profile = dataBaseProfiles;
-  title = "Dynamic Profiles Page";
+  title = 'dynamic-me-page-angular';
 }

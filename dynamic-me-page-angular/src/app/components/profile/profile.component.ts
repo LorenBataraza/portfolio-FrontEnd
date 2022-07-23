@@ -4,7 +4,7 @@ import { Experience } from 'src/assets/intervafaces/Experience';
 import { Profile } from 'src/assets/intervafaces/Profile';
 import { dataBaseProfiles } from '../../../profileMock';
 import { sectionTypes } from 'src/assets/intervafaces/sectionTypes';
-import { ProfilesService } from 'src/app/services/profiles.service';
+// import { ProfilesService } from 'src/app/services/profiles.service';
 
 @Component({
   selector: 'app-profile',
@@ -17,7 +17,7 @@ export class ProfileComponent implements OnInit {
 
 
   constructor(
-    private profileService : ProfilesService
+    // private profileService : ProfilesService
     ) { 
     
   }
