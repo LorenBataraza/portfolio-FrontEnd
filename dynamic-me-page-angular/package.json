@@ -24,11 +24,6 @@
     "@fortawesome/free-brands-svg-icons": "^6.1.1",
     "@fortawesome/free-regular-svg-icons": "^6.1.1",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
-<<<<<<< HEAD
-    "bootstrap": "^5.2.0",
-    "jquery": "^3.6.0",
-=======
->>>>>>> parent of 8d305746 (npm bootstap installation)
     "json-server": "^0.17.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
