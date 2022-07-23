@@ -10,6 +10,7 @@ import { ProjectItemComponent } from './components/project-item/project-item.com
 import { DescriptionSectionComponent } from './components/description-section/description-section.component';
 import { SectionComponent } from './components/section/section.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { DisplayTestingComponent } from './components/display-testing/display-testing.component';
 
 
 
@@ -21,7 +22,8 @@ import { ProfileComponent } from './components/profile/profile.component';
     ProjectItemComponent,
     DescriptionSectionComponent,
     SectionComponent,
-    ProfileComponent
+    ProfileComponent,
+    DisplayTestingComponent
   ],
   imports: [
     BrowserModule,

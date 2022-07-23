@@ -13,7 +13,6 @@ export class UiService {
   constructor() { }
 
   toggleSection(type : sectionTypes ,profile : Profile): Observable<any>{
-
     console.log("Expand/contract Current Section");
     return this.subject.asObservable();
   }

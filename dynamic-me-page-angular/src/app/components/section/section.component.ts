@@ -43,10 +43,10 @@ export class SectionComponent implements OnInit {
     private profileService : ProfilesService
   ) { 
 
-    this.subscription = this.uiService.toggleSection(this.sectionType, this.profile)
-      .subscribe(
-        value => this.isExpanded = value
-      )
+  this.subscription = this.uiService.toggleSection(this.sectionType, this.profile)
+    .subscribe(
+      value => this.isExpanded = value
+    )
 
     }
 
@@ -54,14 +54,10 @@ export class SectionComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
   // Section manipulation
   toggleSection(type : sectionTypes ,profile : Profile):void{
     this.isExpanded = !this.isExpanded
     this.uiService.toggleSection(type, profile);
-
-    profile.show_about = !profile.show_about
-    this.onToggleSection.emit(profile) ;
     
   }
 
@@ -71,11 +67,11 @@ export class SectionComponent implements OnInit {
   }
 
   // Element Manipulation
-  deleteElement(profile : Profile, sectionType : sectionTypes, section: any ){
+  deleteElement(profile : Profile, sectionType : sectionTypes, section:   any ){
     this.profileService.deleteElement(profile,sectionType, section )
   }
 
-  itemExtractor(profile : Profile, sectionType : sectionTypes,): any{
+  itemExtractor(profile : Profile, sectionType : sectionTypes): any{
   // Extract the items to show and expand indicator from the profile
   switch (sectionType) {
     case this.sectionTypesEnum.About:
@@ -89,7 +85,7 @@ export class SectionComponent implements OnInit {
   }
   }
 
-  isExpandedExtractor(profile : Profile, sectionType : sectionTypes,): any{
+  isExpandedExtractor(profile : Profile, sectionType : sectionTypes): any{
     // Extract the items to show and expand indicator from the profile
     switch (sectionType) {
       case this.sectionTypesEnum.About:
@@ -102,5 +98,7 @@ export class SectionComponent implements OnInit {
           return profile.show_projects;
     }
     }
+
+
   
 }

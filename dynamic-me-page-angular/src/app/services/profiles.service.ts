@@ -23,13 +23,19 @@ export class ProfilesService {
       private http:HttpClient
     ) { }
   
+    getUrl(profile : Profile, sectionType : sectionTypes, section: any ): string{
+      const url = this.apiUrl + profile.id + "/" + sectionType.valueOf + "/" + section.id;
+      return url
+    }
+
     getProfiles(): Observable<Profile[]>{
       return this.http.get<Profile[]>(this.apiUrl)
     }
+
   
-    deleteElement(profile : Profile, sectionType : sectionTypes, section: any ): Observable<Task>{
-      const url = this.apiUrl+ profile.id + "/" + sectionType + "/" + section.id;
-      return this.http.delete<Task>(url)
+    deleteElement(profile : Profile, section : sectionTypes, element: any ): Observable<any>{
+      const url = this.getUrl(profile, section, element)
+      return this.http.delete<any>(url)
     }
   
 
@@ -38,14 +44,15 @@ export class ProfilesService {
     //   return this.http.delete<Task>(url)
     // }
 
-    // update(task: Task): Observable<Task>{
-    //   const url = this.apiUrl+ task.id;
-    //   return this.http.put<Task>(url, task, httpOptions)    
-    // }
+    updateElement(profile : Profile, section : sectionTypes, element: any ): Observable<any>{
+      const url = this.getUrl(profile, section, element)
+      return this.http.put<any>(url, element, httpOptions)    
+    }
     
-    // AddElement(task: Task): Observable<Task>{
-    //   return this.http.post<Task>(this.apiUrl, task, httpOptions) ;
-    // }
+    AddElement(profile : Profile, section : sectionTypes, element: any ): Observable<any>{
+      const url = this.getUrl(profile, section, element)  
+      return this.http.post<any>(url, element, httpOptions) ;
+    }
 
     // AddSection(task: Task): Observable<Task>{
     //   return this.http.post<Task>(this.apiUrl, task, httpOptions) ;
