@@ -37,6 +37,9 @@
           
           case this.sectionTypesEnum.Projects:
             return profile.projects;
+          
+          case this.sectionTypesEnum.Skills:
+            return profile.skills;
       }
       }
     
@@ -51,6 +54,9 @@
             
             case this.sectionTypesEnum.Projects:
               return profile.show_projects;
+            
+            case this.sectionTypesEnum.Skills:
+              return profile.show_skills;
         }
         }
   

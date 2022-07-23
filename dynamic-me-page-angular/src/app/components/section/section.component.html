@@ -51,6 +51,17 @@
             </app-project-item>           
         </div>
 
+        <div
+        *ngSwitchCase="sectionTypesEnum.Skills"
+        >
+            <app-skill-item 
+            *ngFor="let item of items; let i = index"
+            [item]="item"
+            [index]="i">
+            </app-skill-item>           
+        </div>
+
+
         <div class="bottom icon-group">
             <fa-icon 
             class="bottom" 

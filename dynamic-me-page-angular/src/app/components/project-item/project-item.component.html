@@ -1,20 +1,16 @@
-<div>
-        <div class="header">
-            <h3 class="proyect-header">{{item.title}}</h3>
-                <div class="icon-group">
-                    <fa-icon  
-                    [ngStyle]="{'color': 'red'}"
-                    [icon]= "editIcon"
-                    (click)="toggleEdition()"
-                    ></fa-icon>
-    
-                    <fa-icon  
-                    [ngStyle]="{'color': 'red'}"
-                    [icon]= "trashIcon"
-                    (click)="EmitExperienceDeletion()"
-                    ></fa-icon>
-                </div>
+<div class="proyect-element">
+    <div class="header">
+        <div class="flex">
+        <h3 class="proyect-header">{{item.title}}</h3>
+        <p class="text-muted">{{item.interval}}</p>
         </div>
-    <p> {{item.description}}</p>
-    <p class="text-muted">{{item.interval}}</p>
+        <div class="icon-group">
+            <fa-icon [ngStyle]="{'color': 'red'}" [icon]="editIcon" (click)="toggleEdition()"></fa-icon>
+
+            <fa-icon [ngStyle]="{'color': 'red'}" [icon]="trashIcon" (click)="EmitExperienceDeletion()"></fa-icon>
+        </div>
+    </div>
+    <div class="center">
+        <p> {{item.description}}</p>
+    </div>
 </div>

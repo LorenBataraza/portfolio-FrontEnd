@@ -1,0 +1,18 @@
+.proyect-header {
+    color: var(--bs-blue);
+    padding: 5px;
+    margin: 0;
+  }
+  
+  
+  .proyect-element  p {  
+    max-width: 80%;
+  
+  }
+
+  
+  .center{
+    display: flex;
+    justify-content: center;
+  }
+  

@@ -1,0 +1,6 @@
+
+div.bottom{ 
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px 15px 10px 10px;
+    }

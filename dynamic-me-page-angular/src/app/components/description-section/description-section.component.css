@@ -1,0 +1,45 @@
+/* Avatar Photo */
+.avatar {
+    vertical-align: middle;
+    width: 200px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 1px 5px #d3d3d3;
+}
+  
+.top-card-photo {
+    margin-top: -100px;
+}
+  
+.banner {
+    max-width: 100%;
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
+}
+
+  
+  .organization-short {
+    display: flex;
+    justify-content: center;
+    gap:10px;
+  }
+  
+  
+  .organization-short>img {
+    flex: 1 1 0%;
+    min-width: 40px;
+    border-radius: 20%;
+  }
+  
+  .organization-short>p {
+    flex: 1 1 65%;
+  }
+
+
+
+  .banner-div {
+    width: 110%;
+     width: 100%;
+     max-height: 300px;
+     overflow: hidden;
+   
+   }

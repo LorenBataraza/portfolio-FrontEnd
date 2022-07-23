@@ -1,0 +1,23 @@
+
+.experience-element {
+    padding: 10px;
+    gap: var(--spacer);
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: stretch;
+  }
+  
+  .experience-element {
+    padding: 5px;
+  }
+  
+  .experience-image {
+    flex: 1 1 auto;
+    border-radius: 20%;
+  }
+  
+  .experience-description {
+    flex: 1 1 75%;
+  }
+  
+  

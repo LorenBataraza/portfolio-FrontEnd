@@ -1,6 +1,10 @@
 import { Profile } from "./assets/intervafaces/Profile"
 import { Experience } from "./assets/intervafaces/Experience"
 import { Project } from "./assets/intervafaces/Project"
+import { Skill } from "./assets/intervafaces/Skill"
+import { SkillLevel } from "./assets/intervafaces/skillLevels"
+
+let SkillLevelEnum = SkillLevel
 
 export const dataBaseProfiles: Profile = 
     {
@@ -48,6 +52,7 @@ export const dataBaseProfiles: Profile =
     show_about: true,
     show_experiences: true,
     show_projects: true,
+    show_skills: true,
     organizations: [
         {
             name:"Iniciativa Aurora",
@@ -56,6 +61,25 @@ export const dataBaseProfiles: Profile =
         {
             name:"IPROBIQ",
             img_path:"../assets/img/organizations/IPROBYQ icon.jpg"
+        }
+    ],
+    skills:[
+        {
+            title:"HTML 5",
+            proficiency: SkillLevelEnum.Competent
+        },
+
+        {
+            title:"CSS 3",
+            proficiency: SkillLevelEnum.Advanced
+        },
+        {
+            title:"Soft Skills",
+            proficiency: SkillLevelEnum.Competent
+        },
+        {
+            title:"Angular",
+            proficiency: SkillLevelEnum.Advanced
         }
     ]
 

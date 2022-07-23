@@ -55,7 +55,7 @@ export class SectionComponent implements OnInit {
 
   ngOnInit(): void {
     
-    this.isExpanded = this.profileService.itemExtractor(this.profile, this.sectionType);;
+    this.isExpanded = this.profileService.itemExtractor(this.profile, this.sectionType);
     this.items = this.profileService.itemExtractor(this.profile, this.sectionType);
   
   }
