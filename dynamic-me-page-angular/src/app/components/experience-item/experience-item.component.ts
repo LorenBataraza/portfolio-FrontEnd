@@ -15,7 +15,7 @@ import { faPenToSquare } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./experience-item.component.css']
 })
 export class ExperienceItemComponent implements OnInit {
-  profile: Profile= dataBaseProfiles;
+  profile: Profile= dataBaseProfiles[0];
 
   @Input() item: Experience = this.profile.experiences[0];
   @Input() index: number = 0 ;

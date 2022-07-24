@@ -7,7 +7,7 @@
     <div class="icon-group">
     
         <fa-icon  
-            [ngStyle]="{'color': 'red'}"
+            [ngStyle]="{'color': 'var(--bs-blue)'}"
             [icon]= "isExpanded? compressIcon : expandIcon"
             (click)="toggleSection(sectionType,profile)"
         >
@@ -65,7 +65,7 @@
         <div class="bottom icon-group">
             <fa-icon 
             class="bottom" 
-            [ngStyle]="{'color': 'red'}"
+            [ngStyle]="{'color': 'var(--bs-blue)'}"
             [icon]="trashIcon"
             (click)="emitDeleteSection()"
             >

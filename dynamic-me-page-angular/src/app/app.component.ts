@@ -8,6 +8,6 @@ import { dataBaseProfiles } from '../profileMock';
   styleUrls: ['./app.component.css', '../styles.css']
 })
 export class AppComponent {
-  profile: Profile = dataBaseProfiles;
+  profile: Profile = dataBaseProfiles[0];
   title = 'dynamic-me-page-angular';
 }

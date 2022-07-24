@@ -23,7 +23,7 @@ export class SectionComponent implements OnInit {
   // Input instanciation
   sectionTypesEnum = sectionTypes;
   @Input() sectionTitle: string = "New Section";
-  @Input() profile: Profile = dataBaseProfiles;
+  @Input() profile: Profile = dataBaseProfiles[0];
   @Input() sectionType: sectionTypes = this.sectionTypesEnum.About;
   
   isExpanded: boolean = true;

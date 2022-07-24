@@ -8,7 +8,8 @@ import { dataBaseProfiles } from '../../profileMock';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  profile: Profile = dataBaseProfiles;
+  profile: Profile = dataBaseProfiles[0];
+  title: string = "Profile Page";
   constructor() { }
 
   ngOnInit(): void {  

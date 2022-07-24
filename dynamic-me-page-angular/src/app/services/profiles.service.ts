@@ -18,7 +18,7 @@
 
  export class ProfilesService {
   sectionTypesEnum = sectionTypes ; 
-  profile: Observable<Profile> = new Observable( subscriber  => subscriber.next(dataBaseProfiles))
+  profiles: Observable<Profile[]> = new Observable( subscriber  => subscriber.next(dataBaseProfiles))
 
      private apiUrl = 'http://localhost:4001/profiles/';
      constructor(
@@ -66,14 +66,13 @@
        return url
      }
 
-//     getMuckUpProfile(): Observable<Profile>{
-//       return this.profile
-//       // return this.http.get<Profile[]>(this.apiUrl)
-//     }
+    getMuckUpProfile(): Observable<Profile[]>{
+      return this.http.get<Profile[]>(this.apiUrl)
+     }
 
-//     getProfiles(): Observable<Profile[]>{
-//       return this.http.get<Profile[]>(this.apiUrl)
-//     }
+     getProfiles(): Observable<Profile[]>{
+       return this.http.get<Profile[]>(this.apiUrl)
+     }
   
 //     deleteElement(profile : Profile, section : sectionTypes, element: any ): Observable<any>{
 //       const url = this.getUrl(profile, section, element)

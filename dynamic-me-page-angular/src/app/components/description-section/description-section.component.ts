@@ -8,7 +8,7 @@ import { dataBaseProfiles } from 'src/profileMock';
   styleUrls: ['./description-section.component.css']
 })
 export class DescriptionSectionComponent implements OnInit {
-  @Input() profile: Profile = dataBaseProfiles;
+  @Input() profile: Profile = dataBaseProfiles[0];
 
   constructor() { }
 

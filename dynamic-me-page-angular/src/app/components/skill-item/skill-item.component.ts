@@ -16,7 +16,7 @@ import { faPenToSquare } from '@fortawesome/free-solid-svg-icons';
 })
 export class SkillItemComponent implements OnInit {
   skillLevelEnum = SkillLevel;
-  profile: Profile= dataBaseProfiles;
+  profile: Profile= dataBaseProfiles[0];
   completionBarPercentaje: number = 50;
   percentajeString : string = "50%"
   @Input() item: Skill = this.profile.skills[0];

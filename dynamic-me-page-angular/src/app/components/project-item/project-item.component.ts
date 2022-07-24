@@ -17,7 +17,7 @@ import { Project } from 'src/assets/intervafaces/Project';
   styleUrls: ['./project-item.component.css']
 })
 export class ProjectItemComponent implements OnInit {
-  profile: Profile= dataBaseProfiles;
+  profile: Profile= dataBaseProfiles[0];
   @Input() item: Project = this.profile.projects[0];
   @Input() index: number =0; 
   

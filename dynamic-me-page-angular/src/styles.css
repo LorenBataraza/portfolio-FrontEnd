@@ -43,6 +43,7 @@ h5{
 
 img {
   object-fit: contain;
+  overflow: hidden;
   overflow: clip;
   vertical-align: middle;
   margin: 1px;
@@ -181,6 +182,7 @@ section.description{
 }
 
 fa-icon{
-  cursor: pointer
+  cursor: pointer;
+  font-size: var(--icon-size) !important;
   }
 

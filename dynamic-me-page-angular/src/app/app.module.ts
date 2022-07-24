@@ -14,6 +14,8 @@ import { DescriptionSectionComponent } from './components/description-section/de
 import { SectionComponent } from './components/section/section.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { SkillItemComponent } from './components/skill-item/skill-item.component';
+import { ProfileHubComponent } from './components/profile-hub/profile-hub.component';
+import { ProfileCardComponent } from './components/profile-card/profile-card.component';
 
 
 
@@ -26,7 +28,9 @@ import { SkillItemComponent } from './components/skill-item/skill-item.component
     DescriptionSectionComponent,
     SectionComponent,
     ProfileComponent,
-    SkillItemComponent
+    SkillItemComponent,
+    ProfileHubComponent,
+    ProfileCardComponent
   ],
   imports: [
     BrowserModule,
