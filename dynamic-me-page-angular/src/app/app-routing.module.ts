@@ -3,12 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { ProfileHubComponent } from './components/profile-hub/profile-hub.component';
 import { ProfileComponent } from './components/profile/profile.component';
-
+import{ PageNotFoundComponent } from './components/page-not-found/page-not-found.component'
 
 const routes: Routes = [
-  {path:'profiles', component:ProfileHubComponent },
-  {path:'profiles/:id', component: ProfileComponent},
-  {path: '', redirectTo: '/profiles', pathMatch: 'full'}
+  {path:'profiles/:profileId', component: ProfileComponent},
+  {path:'profiles-hub', component:ProfileHubComponent },
+  {path: '', redirectTo: 'profiles-hub', pathMatch: 'full'},
+  {path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({

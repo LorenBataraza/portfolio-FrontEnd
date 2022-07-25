@@ -9,6 +9,8 @@
   
 
 .top-card-photo {
+    aspect-ratio: 1;
+    object-fit: cover;
     margin-top: -40%;
     margin-left: 1rem;
 }

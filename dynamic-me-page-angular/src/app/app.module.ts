@@ -16,6 +16,10 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { SkillItemComponent } from './components/skill-item/skill-item.component';
 import { ProfileHubComponent } from './components/profile-hub/profile-hub.component';
 import { ProfileCardComponent } from './components/profile-card/profile-card.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { ImageUploadComponent } from './components/image-upload/image-upload.component';
+import { CreateProfileComponent } from './components/create-profile/create-profile.component';
+import { InputTextComponent } from './components/input-text/input-text.component';
 
 
 
@@ -30,7 +34,11 @@ import { ProfileCardComponent } from './components/profile-card/profile-card.com
     ProfileComponent,
     SkillItemComponent,
     ProfileHubComponent,
-    ProfileCardComponent
+    ProfileCardComponent,
+    PageNotFoundComponent,
+    ImageUploadComponent,
+    CreateProfileComponent,
+    InputTextComponent
   ],
   imports: [
     BrowserModule,

@@ -61,7 +61,7 @@
         }
   
 
-     getUrl(profile : Profile, sectionType : sectionTypes, section: any ): string{
+    getUrl(profile : Profile, sectionType : sectionTypes, section: any ): string{
        const url = this.apiUrl + profile.id + "/" + sectionType.valueOf + "/" + section.id;
        return url
      }
@@ -74,6 +74,21 @@
        return this.http.get<Profile[]>(this.apiUrl)
      }
   
+     getProfileByID(id: number, profiles: Profile[]): Observable<Profile>{
+      return this.ifNotUndefined(profiles.find(obj=> obj.id == id),1);
+     }
+
+
+     ifNotUndefined(object_1 : any, object_2 : any){
+      if(object_1 != undefined){
+        return object_1;
+      }
+      else{
+        console.log("UNDEFINED!")
+        return object_2;
+      }
+    }
+
 //     deleteElement(profile : Profile, section : sectionTypes, element: any ): Observable<any>{
 //       const url = this.getUrl(profile, section, element)
 //       return this.http.delete<any>(url)
