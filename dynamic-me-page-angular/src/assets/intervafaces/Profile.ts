@@ -4,6 +4,7 @@ import { Project } from "./Project";
 import{ Skill } from "./Skill"
 
 export interface Profile{
+    id: number;
     name:string;
     description_texts: string[]; 
     avatar_path: string;
@@ -15,7 +16,6 @@ export interface Profile{
     show_experiences: boolean;
     show_projects: boolean;
     show_skills: boolean;
-    id?: number;
     organizations: Organization[];
     skills: Skill[];
 }
