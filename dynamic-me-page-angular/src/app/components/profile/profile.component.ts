@@ -22,7 +22,7 @@ export class ProfileComponent implements OnInit {
   profile: Profile = dataBaseProfiles[0];
   id: number = 1;
 
-  subscription?: Subscription;
+
 
   constructor(
     private activeRoute : ActivatedRoute,
@@ -34,13 +34,10 @@ export class ProfileComponent implements OnInit {
   ngOnInit(): void {
     this.profile = this.Inputprofile;
     
-    this.activeRoute.params.subscribe( params => { 
-      this.id = params['profileId'];
-      this.subscription = this.profilesService.getProfileByID(this.id, this.profiles).subscribe(
-        (profile) => this.profile= profile
-      )
-    });
-
+    this.activeRoute.params.subscribe( params => 
+      this.id = params['profileId']
+    );
+    this.profile = this.profilesService.getProfileByID(this.id, this.profiles)
   }
 
 

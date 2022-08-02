@@ -12,4 +12,7 @@ export class ImageUploadComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  processFile(){
+    debugger;
+  }
 }

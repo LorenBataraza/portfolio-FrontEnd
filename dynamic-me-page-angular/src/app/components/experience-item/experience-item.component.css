@@ -12,8 +12,9 @@
   }
   
   .experience-image {
-    flex: 1 1 auto;
+    flex: 1 1 25%;
     border-radius: 20%;
+    overflow: hidden;
   }
   
   .experience-description {
@@ -21,3 +22,14 @@
   }
   
   
+img{
+  object-fit: contain;
+  flex: 1 1 0%;
+  border-radius: 20%;
+  overflow: hidden;
+  }
+
+
+h3{
+  margin: 0;
+}

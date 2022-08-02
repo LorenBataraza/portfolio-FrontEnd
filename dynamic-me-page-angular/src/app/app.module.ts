@@ -3,8 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppRoutingModule } from './app-routing.module';
 
-import{ HttpClientModule } from '@angular/common/http'
-
+import{ HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -20,7 +20,9 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { ImageUploadComponent } from './components/image-upload/image-upload.component';
 import { CreateProfileComponent } from './components/create-profile/create-profile.component';
 import { InputTextComponent } from './components/input-text/input-text.component';
+import { SignInComponent } from './components/sign-in/sign-in.component';
 
+import{TokenCompletionService} from '../app/services/token-completion.service'
 
 
 @NgModule({
@@ -38,15 +40,22 @@ import { InputTextComponent } from './components/input-text/input-text.component
     PageNotFoundComponent,
     ImageUploadComponent,
     CreateProfileComponent,
-    InputTextComponent
+    InputTextComponent,
+    SignInComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [ 
+    ProfileCardComponent, { 
+    provide: HTTP_INTERCEPTORS, 
+    useClass: TokenCompletionService, 
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

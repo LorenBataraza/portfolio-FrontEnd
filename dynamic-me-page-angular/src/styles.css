@@ -186,3 +186,25 @@ fa-icon{
   font-size: var(--icon-size) !important;
   }
 
+
+
+
+.list-group{
+  flex-direction: row;
+}
+.list-group-item{
+  max-width: fit-content;
+  flex-basis: 100%;
+}
+
+
+.form-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+
+  gap: 0.5rem;
+  flex-basis: 100%;
+}

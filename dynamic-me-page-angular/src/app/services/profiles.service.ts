@@ -74,7 +74,7 @@
        return this.http.get<Profile[]>(this.apiUrl)
      }
   
-     getProfileByID(id: number, profiles: Profile[]): Observable<Profile>{
+     getProfileByID(id: number, profiles: Profile[]): Profile{
       return this.ifNotUndefined(profiles.find(obj=> obj.id == id),1);
      }
 

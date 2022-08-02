@@ -1,1 +1,86 @@
 <p>create-profile works!</p>
+
+
+<form [formGroup]="form" (ngSubmit)="($event)">
+    <div>
+
+        <label for="item">Element </label>
+        <div>
+            <input type="text" name="item" id="item" formControlName="item">
+        </div>
+
+        <div class="col-auto">
+            <label class="sr-only" for="inlineFormInputGroup">Username</label>
+            <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text">@</div>
+              </div>
+              <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username">
+            </div>
+          </div>
+
+    </div>
+    <div>
+        <button type="submit" class="btn btn-primary">Crear Perfil</button>
+    </div>
+
+
+
+    <div class="form-row">
+        <div class="col-md-4">
+          <label for="validationCustom01">First name</label>
+          <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="Mark" required>
+
+        </div>
+        <div class="col-md-4">
+          <label for="validationCustom02">Last name</label>
+          <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="Otto" required>
+
+        </div>
+        <div class="col-md-4">
+
+          <label for="validationCustomUsername">Username</label>
+
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroupPrepend">@</span>
+            </div>
+            <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Profile Picture Upload - Required -->
+      <app-image-upload></app-image-upload>
+
+      <!-- Banner Upload - Not Required -->
+
+
+
+      <div class="form-row">
+        <div class="col-7">
+            <input type="text" class="form-control" placeholder="City">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="State">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Zip">
+        </div>
+    </div>
+
+
+    <!-- Education Upload -->
+
+
+    <!-- Experiences Upload -->
+
+
+    <!-- Proyects Upload -->
+
+
+</form>
+
+
+
